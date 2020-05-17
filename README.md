@@ -84,37 +84,37 @@ The first page will be displayed in *127.0.0.5000/*
 
 The sequence of action is
 
-*Log in with NRIC
-*Retrieve and Verify myInfo details
-*Enter OTP
+* Log in with NRIC
+* Retrieve and Verify myInfo details
+* Enter OTP
 
 **Testator**
-*Add asset (Name, Value in SGD which will be converted to ether)
-*Add beneficiary1 (Wallet Addr, Name, email, Phone num, percentage split)
-*Add beneficiary2
-*Add witness (Wallet Addr, Name, email)
-*Add executor(Wallet Addr, Name)
+* Add asset (Name, Value in SGD which will be converted to ether)
+* Add beneficiary1 (Wallet Addr, Name, email, Phone num, percentage split)
+* Add beneficiary2
+* Add witness (Wallet Addr, Name, email)
+* Add executor(Wallet Addr, Name)
 
 **Witness**
-*Sign contract (Using Wallet Addr, Name, Key)
+* Sign contract (Using Wallet Addr, Name, Key)
 (Check json will created in ~\jsonFiles\will.json)
-*Verfiy signature (with hash produced from signing)
+* Verfiy signature (with hash produced from signing)
 
 **Executor**
-*Submit Death Certificate
+* Submit Death Certificate
 (Testator's Name:Sam Yee, Death Cerficiation No.220427, Picture of Death cert)
-*Activate Contract (with Executor's wallet Addr and private key)
+* Activate Contract (with Executor's wallet Addr and private key)
 (Ether sent from testator wallet account to contract address to various beneficiaries.)
 
 **Beneficiary**
-*Check myEtherWallet for received ether
+* Check myEtherWallet for received ether
 
 #### Additional Functions
-*Add multiple actors (eg: witness, beneficiary, executors)
-*View Assets, Beneficiary, Executors, Witness
-*Witness disagrees with contract, Able to add reason
-*Terminate Will
-*Logout
+* Add multiple actors (eg: witness, beneficiary, executors)
+* View Assets, Beneficiary, Executors, Witness
+* Witness disagrees with contract, Able to add reason
+* Terminate Will
+* Logout
 
 ## Project Platform
 
@@ -132,3 +132,5 @@ Json	|Create the will
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details
+
+
