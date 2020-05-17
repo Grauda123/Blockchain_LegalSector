@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Asset</title>
+	 <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <style type="text/css">
+.form-style-8{
+	font-family: 'Open Sans Condensed', arial, sans;
+	width: 500px;
+	padding: 30px;
+	background: #FFFFFF;
+	margin: 50px auto;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+	-moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+	-webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+
+}
+.form-style-8 h2{
+	background: #4D4D4D;
+	text-transform: uppercase;
+	font-family: 'Open Sans Condensed', sans-serif;
+	color: #F0F8FF;
+	font-size: 18px;
+	font-weight: 100;
+	padding: 20px;
+	margin: -30px -30px 30px -30px;
+}
+.form-style-8 input[type="text"],
+.form-style-8 input[type="date"],
+.form-style-8 input[type="datetime"],
+.form-style-8 input[type="email"],
+.form-style-8 input[type="number"],
+.form-style-8 input[type="search"],
+.form-style-8 input[type="time"],
+.form-style-8 input[type="url"],
+.form-style-8 input[type="password"],
+.form-style-8 textarea,
+.form-style-8 select
+{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	outline: none;
+	display: block;
+	width: 100%;
+	padding: 7px;
+	border: none;
+	border-bottom: 1px solid #ddd;
+	background: transparent;
+	margin-bottom: 10px;
+	font: 16px Arial, Helvetica, sans-serif;
+	height: 45px;
+}
+.form-style-8 textarea{
+	resize:none;
+	overflow: hidden;
+}
+</style>
+<style>
+          @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+}
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
+.fa-2x {
+font-size: 2em;
+}
+.fa {
+position: relative;
+display: table-cell;
+width: 60px;
+height: 36px;
+text-align: center;
+vertical-align: middle;
+font-size:20px;
+}
+
+
+.main-menu:hover,nav.main-menu.expanded {
+width:250px;
+overflow:visible;
+}
+
+.main-menu {
+background:#212121;
+border-right:1px solid #e5e5e5;
+position:absolute;
+top:0;
+bottom:0;
+height:100%;
+left:0;
+width:60px;
+overflow:hidden;
+-webkit-transition:width .05s linear;
+transition:width .05s linear;
+-webkit-transform:translateZ(0) scale(1,1);
+z-index:1000;
+}
+
+.main-menu>ul {
+margin:7px 0;
+}
+
+.main-menu li {
+position:relative;
+display:block;
+width:250px;
+}
+
+.main-menu li>a {
+position:relative;
+display:table;
+border-collapse:collapse;
+border-spacing:0;
+color:#999;
+ font-family: arial;
+font-size: 14px;
+text-decoration:none;
+-webkit-transform:translateZ(0) scale(1,1);
+-webkit-transition:all .1s linear;
+transition:all .1s linear;
+
+}
+
+.main-menu .nav-icon {
+position:relative;
+display:table-cell;
+width:60px;
+height:36px;
+text-align:center;
+vertical-align:middle;
+font-size:18px;
+}
+
+.main-menu .nav-text {
+position:relative;
+display:table-cell;
+vertical-align:middle;
+width:190px;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.main-menu>ul.logout {
+position:absolute;
+left:0;
+bottom:0;
+}
+
+.no-touch .scrollable.hover {
+overflow-y:hidden;
+}
+
+.no-touch .scrollable.hover:hover {
+overflow-y:auto;
+overflow:visible;
+}
+
+a:hover,a:focus {
+text-decoration:none;
+}
+
+nav {
+-webkit-user-select:none;
+-moz-user-select:none;
+-ms-user-select:none;
+-o-user-select:none;
+user-select:none;
+}
+
+nav ul,nav li {
+outline:0;
+margin:0;
+padding:0;
+}
+.main-menu li:hover>a,nav.main-menu li.active>a,.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus,.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,.dashboard-page nav.dashboard-menu ul li.active a {
+color:#fff;
+background-color:#5fa2db;
+}
+.area {
+float: left;
+background: #e2e2e2;
+width: 100%;
+height: 100%;
+}
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Titillium WebLight'), local('TitilliumWeb-Light'), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff) format('woff');
+}
+
+      </style>
+</head>
+<body>
+{% if session['user'] == 'Testator' %}
+  <nav class="main-menu" id="Testator Nav">
+            <ul>
+                <li>
+                    <a href="/home">
+                        <i class="fa fa-home fa-2x"></i>
+                        <span class="nav-text">
+                            Home
+                        </span>
+                    </a>
+
+                </li>
+                <li class="has-subnav">
+                    <a href="/addAsset">
+                        <i class="fa fa-plus-circle fa-2x"></i>
+                        <span class="nav-text">
+                            Add Asset
+                        </span>
+                    </a>
+                </li>
+                <li class="has-subnav">
+                    <a href="/addBeneficiary">
+                       <i class="fa fa-plus-circle fa-2x"></i>
+                        <span class="nav-text">
+                            Add Beneficiary
+                        </span>
+                    </a>
+
+                </li>
+                <li class="has-subnav">
+                    <a href="/addExecutors">
+                       <i class="fa fa-plus-circle fa-2x"></i>
+                        <span class="nav-text">
+                            Add Executors
+                        </span>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="/addWitness">
+                        <i class="fa fa-plus-circle fa-2x"></i>
+                        <span class="nav-text">
+                            Add Witness
+                        </span>
+                    </a>
+                </li>
+                <li>
+                   <a href="/createWillFile">
+                       <i class="fa fa-plus fa-2x"></i>
+                        <span class="nav-text">
+                            Create Will File
+                        </span>
+                    </a>
+                </li>
+                 <li>
+                   <a href="/getReason">
+                       <i class="fa fa-eye fa-2x"></i>
+                        <span class="nav-text">
+                            View Witness Reason of Disagree
+                        </span>
+                    </a>
+                </li>
+                <li>
+                   <a href="/showAsset">
+                       <i class="fa fa-eye fa-2x"></i>
+                        <span class="nav-text">
+                            View Assets
+                        </span>
+                    </a>
+                </li>
+                <li>
+                   <a href="/beneficiary">
+                       <i class="fa fa-eye fa-2x"></i>
+                        <span class="nav-text">
+                            View Beneficiary
+                        </span>
+                    </a>
+                </li>
+                <li>
+                   <a href="/getExecutors">
+                       <i class="fa fa-eye fa-2x"></i>
+                        <span class="nav-text">
+                            View Executors
+                        </span>
+                    </a>
+                </li>
+                <li>
+                   <a href="/getWitness">
+                       <i class="fa fa-eye fa-2x"></i>
+                        <span class="nav-text">
+                            View Witness
+                        </span>
+                    </a>
+                </li>
+                <li>
+                   <a href="/send">
+                       <i class="fa fa-envelope fa-2x"></i>
+                        <span class="nav-text">
+                            Send Ether
+                        </span>
+                    </a>
+                </li>
+                <li>
+                   <a href="/terminate">
+                       <i class="fa fa-ban fa-2x"></i>
+                        <span class="nav-text">
+                            Terminate Will
+                        </span>
+                    </a>
+                </li>
+
+
+            </ul>
+
+            <ul class="logout">
+                <li>
+                   <a href="/logout">
+                         <i class="fa fa-power-off fa-2x"></i>
+                        <span class="nav-text">
+                            Logout
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+  {% endif %}
+<div class="form-style-8">
+    <form action="/showAsset" method="post">
+		<h2>Add asset</h2>
+	  Name of Asset: <input type="text" name="AssetName">
+	  <br>
+	  Value of Asset: <input type="number" name="AssetValue" min="1">
+	  <br>
+	  <button type="submit" value="submit">Submit</button>
+	</form>
+</div>
+</body>
+</html>

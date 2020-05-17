@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <body>
+	<form action="/beneficiary" method="post">
+	<!--
+	  Beneficiary:<br>
+	  <input type="text" name="B1"><br>
+	  Beneficiary:<br>
+	  <input type="text" name="B2">
+	 -->
+
+	  Current Beneficaries: <input type="text" value={{Bnum}} style="border:none" readonly>
+	  <br>
+	  <button type="button" onclick="viewBeneficiary()">View current Beneficaries</button>
+	  <!-- Original hide this, view button click then show-->
+	  <div id="retrieveDIV" style="display:none">
+		     <table>
+         {% for b in Blist %}
+         <ol>
+           <li>{{ b[0]}}</li>
+           <li>{{ b[1] }}</li>
+           <li> {{ b[2] }}</li>
+		   <li> {{ b[3] }}</li>
+         </ol>
+         {% endfor %}
+     </table>
+	  </div>
+	  <br><br><br>
+	  <div id="div">
+		<button onclick ="appendRow()">Add Row</button>
+	  </div>
+	 <button value="edit">Edit</button>
+	 <br><br>
+	  Wallet Address: <input type="text" name="addr">
+	  <br>
+	  Email: <input type="email" name="email">
+	  <br>
+	  Phone Number: <input type="tel" name="telNum" pattern="(6|8|9)\d{7}">
+	  <br>
+	  Percentage Split: <input type="number" name="percent" min="1" max="100">
+	  <br><br><br>
+	  <button type="submit" value="submit">Submit</button>
+	  <br><br>
+	 
+	</form>
+	<script>
+		function viewBeneficiary(){
+			var x = document.getElementById("retrieveDIV");
+			if (x.style.display === "none") {
+				x.style.display = "block";
+			} else {
+				x.style.display = "none";
+			}
+		}
+		
+		var x=1
+		function appendRow()
+		{
+			var d = document.getElementById('div');
+			d.innerHTML += "<input type='text' name='B"+ x++ +"'><br >";
+		}
+	</script>
+  </body>
+</html>
