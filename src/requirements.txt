@@ -32,7 +32,7 @@ importlib-metadata==0.23
 importlib-resources==1.0.2
 ipfshttpclient==0.4.12
 itsdangerous==1.1.0
-Jinja2==2.11.1
+Jinja2==2.11.3
 jsonschema==3.2.0
 lru-dict==1.1.6
 MarkupSafe==1.1.1
