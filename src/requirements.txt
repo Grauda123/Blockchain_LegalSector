@@ -43,7 +43,7 @@ mypy-extensions==0.4.3
 netaddr==0.7.19
 parsimonious==0.8.1
 pipenv==2018.11.26
-protobuf==3.11.0
+protobuf==3.15.0
 psycopg2==2.8.4
 py-solc==3.2.0
 py-solc-x==0.7.2
