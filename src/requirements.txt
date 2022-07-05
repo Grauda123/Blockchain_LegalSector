@@ -47,7 +47,7 @@ protobuf==3.11.0
 psycopg2==2.8.4
 py-solc==3.2.0
 py-solc-x==0.7.2
-pycares==3.1.1
+pycares==4.2.0
 pycoin==0.90.20190728
 pycparser==2.19
 pycryptodome==3.9.4
