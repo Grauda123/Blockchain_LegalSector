@@ -15,7 +15,7 @@ cytoolz==0.10.1
 dictools==0.1.1
 distlib==0.3.0
 eth-abi==2.1.0
-eth-account==0.4.0
+eth-account==0.5.9
 eth-hash==0.2.0
 eth-keyfile==0.5.1
 eth-keys==0.2.4
