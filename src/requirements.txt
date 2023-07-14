@@ -10,7 +10,7 @@ certifi==2022.12.7
 cffi==1.13.2
 chardet==3.0.4
 Click==7.0
-cryptography==2.8
+cryptography==41.0.2
 cytoolz==0.10.1
 dictools==0.1.1
 distlib==0.3.0
